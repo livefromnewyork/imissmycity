@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Go to the greatest city in the world from anywhere in the world.">
+    <meta name="keywords" content="New York, NYC, Ambiance, Study, Music">
+    <meta name="author" content="Maggie Kwan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i miss my city</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<section class="header">
+    <button class="about" onclick="openDialog()">About</button>
+    <div id="overlay" class="overlay" onclick="closeDialog()"></div>
+    <div id="dialog" class="dialog">
+        <button class="close-btn" onclick="closeDialog()">×</button>
+        <h3>About</h3>
+        <p>for everyone home away from home</p>
+        <p>use google chrome for optimzed results</p>
+        <p>created by maggie kwan, 2026.</p>
+        <p>inspired by <a href="https://www.imissmylibrary.com/">imissmylibrary.com</a>, <a href="https://imissmycafe.com/">imissmycafe.com</a>, and a conversation with my boyfriend.</p>
+        <p>audio sourced from <a href="https://www.zapsplat.com/">zapsplat.com</a> and <a href="https://www.freesound.org">freesound.org</a></p>
+    </div>
+</section>
+<section class="content">
+    <div class="column">
+<!--        <h1>i miss <br>my city...</h1>-->
+        <img class="logo" src="assets/logo.png" alt="i miss my city">
+    </div>
+    <div class = "column">
+<!--        <p>i'm going to put some drawings here or something</p>-->
+    </div>
+    <div class="column">
+        <div class="pause-all">
+            <p>pause all sounds &nbsp;</p>
+            <input type="checkbox" onclick="pauseAll()" id="pauseAll">
+        </div>
+        <div class="audio-play">
+                <p class="sound-row">traffic &nbsp;</p>
+                    <button id="audio-1" onclick="playAudio(1)" class="play-btn"></button>
+            <audio loop id="1">
+                <source src="assets/traffic_loop_cut_v3.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+            <div class="volume">
+                <input type="range" id="volume-slider-1" onchange="changeVolume(1)" min="0" max="1" step="0.025" value="0.67">
+            </div>
+        </div>
+
+        <div class="audio-play">
+            <p class="sound-row">sirens &nbsp;</p>
+            <button id="audio-2" onclick="playAudio(2)" class="play-btn"></button>
+            <audio loop id="2">
+                <source src="assets/sirens.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+            <div class="volume">
+                <input type="range" id="volume-slider-2" onchange="changeVolume(2)" min="0" max="1" step="0.025" value="0.3">
+            </div>
+        </div>
+
+        <div class="audio-play">
+            <p class="sound-row"> talking &nbsp;</p>
+            <button id="audio-3" onclick="playAudio(3)" class="play-btn"></button>
+            <audio loop id="3">
+                <source src="assets/yappers%20%202.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+            <div class="volume">
+                <input type="range" id="volume-slider-3" onchange="changeVolume(3)" min="0" max="1" step="0.025" value="0.67">
+            </div>
+        </div>
+
+        <div class="audio-play">
+            <p class="sound-row">subway &nbsp;</p>
+            <button id="audio-4" onclick="playAudio(4)" class="play-btn"></button>
+            <audio loop id="4">
+                <source src="assets/subway.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+            <div class="volume">
+                <input type="range" id="volume-slider-4" onchange="changeVolume(4)" min="0" max="1" step="0.025" value="0.67">
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

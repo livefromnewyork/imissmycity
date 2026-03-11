@@ -1,0 +1,166 @@
+*{
+    font-family: 'Helvetica', sans-serif;
+    background-color:#2a344d;
+}
+
+h1{
+    color:white;
+    font-size:75px;
+}
+
+h2{
+    color:white;
+}
+
+p{
+    font-size:20px;
+}
+
+.header{
+    position:absolute;
+    left:50%;
+    padding-bottom: 20px;
+    /*dislay: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*width: 50%p*/
+}
+
+.about{
+    font-size:17px;
+}
+.content{
+    color:white;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+a{
+    color:white;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.logo{
+    display: grid;
+    justify-content: center;
+    max-width: 75%;
+    height:auto;
+    padding-top: 25%;
+    /*padding-bottom: 50%;*/
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    z-index: 101;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.sound-row{
+    font-size:24px;
+}
+
+.audio-play{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.pause-all{
+    display:flex;
+    align-items:center;
+}
+.dialog h3{
+    background:white;
+    color:black;
+    text-align: center;
+}
+
+.dialog p{
+    background:white;
+    color:black;
+    text-align: left;
+}
+
+.dialog a{
+    background:white;
+    color:black;
+    text-align: center;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.about{
+    float:right;
+    background-color: transparent;
+    border:none;
+    font-family:Helvetica, sans-serif;
+    color:white;
+}
+
+.header{
+    padding-top:10px;
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.play-btn::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.play-btn.pause::before {
+    border: none;
+    width: 6px;
+    height: 20px;
+    background: white;
+    left: 12px;
+    top: 10px;
+    box-shadow: 10px 0 white;
+}
+
+.sound-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
